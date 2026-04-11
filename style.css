@@ -112,6 +112,8 @@ a{
         background: rgba(11,11,16,0.98);
         backdrop-filter: blur(10px);
         display: flex;
+        flex-direction: column;
+        gap: 16px;
         align-items: center;
         justify-content: center;
         transition: 0.3s;
@@ -129,7 +131,8 @@ a{
     }
 
     .nav-menu{
-        display: block;
+        display: flex;
+        gap: 12px;
     }
 }
 
