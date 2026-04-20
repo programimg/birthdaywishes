@@ -39,6 +39,7 @@ a{
     padding: 14px 0;
     gap: 12px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .brand-block{
@@ -141,16 +142,32 @@ a{
     }
 
     .nav-menu{
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        display: flex;
         flex-direction: column;
         gap: 12px;
-        margin-top: 14px;
+        margin-top: 10px;
+        padding: 16px;
+        background: rgba(20, 20, 28, 0.95);
+        backdrop-filter: blur(12px);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,.1);
+        box-shadow: 0 16px 32px rgba(0,0,0,.6);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
         align-items: stretch;
+        z-index: 100;
     }
 
     .nav-menu.active{
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 }
 
